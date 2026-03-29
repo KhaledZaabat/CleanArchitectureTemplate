@@ -1,5 +1,6 @@
 namespace CWM.CleanArchitecture.Api.Extensions;
 
+using CWM.CleanArchitecture.Application.Exceptions;
 using FluentValidation;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
@@ -16,7 +17,7 @@ public sealed class GlobalExceptionHandler(
         var (status, title) = exception switch
         {
             ValidationException => (StatusCodes.Status400BadRequest, "Validation Failed"),
-            InvalidOperationException => (StatusCodes.Status404NotFound, "Not Found"),
+            NotFoundException => (StatusCodes.Status404NotFound, "Not Found"),
             ArgumentException => (StatusCodes.Status400BadRequest, "Bad Request"),
             UnauthorizedAccessException => (StatusCodes.Status401Unauthorized, "Unauthorized"),
             _ => (StatusCodes.Status500InternalServerError, "Server Error")

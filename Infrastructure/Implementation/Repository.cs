@@ -1,6 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 using CWM.CleanArchitecture.Application.Interfaces;
 using CWM.CleanArchitecture.Domain.Common;
 using CWM.CleanArchitecture.Infrastructure.Persistence;
