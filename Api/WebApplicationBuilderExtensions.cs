@@ -3,7 +3,7 @@ using CWM.CleanArchitecture.Application.Interfaces;
 using CWM.CleanArchitecture.Infrastructure;
 using CWM.CleanArchitecture.Infrastructure.Implementation;
 using CWM.CleanArchitecture.Infrastructure.Persistence;
-using CWM.CleanArchitecture.ServiceDefaults;
+using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using Serilog;
 using Wolverine;
@@ -18,12 +18,12 @@ public static class WebApplicationBuilderExtensions
 {
     public static WebApplicationBuilder AddApiServices(this WebApplicationBuilder builder)
     {
-        builder.AddServiceDefaults();
         builder.AddSerilog();
         builder.AddDatabase();
         builder.AddApplicationServices();
         builder.AddApiInfrastructure();
         builder.AddOpenApiDocs();
+        builder.AddHealthChecks();
         builder.AddWolverine();
 
         return builder;
@@ -38,13 +38,12 @@ public static class WebApplicationBuilderExtensions
     }
     private static void AddDatabase(this WebApplicationBuilder builder)
     {
-        builder.AddSqlServerDbContext<AppDbContext>("cwm-db", settings =>
-        {
-            settings.DisableRetry = true; // TODO :  enable production
-        });
+        var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+        builder.Services.AddDbContext<AppDbContext>(options =>
+            options.UseSqlServer(connectionString));
 
         builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-
     }
 
     private static void AddApplicationServices(this WebApplicationBuilder builder)
@@ -96,9 +95,14 @@ public static class WebApplicationBuilderExtensions
         });
     }
 
+    private static void AddHealthChecks(this WebApplicationBuilder builder)
+    {
+        builder.Services.AddHealthChecks();
+    }
+
     private static void AddWolverine(this WebApplicationBuilder builder)
     {
-        var connectionString = builder.Configuration.GetConnectionString("cwm-db");
+        var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
         builder.Host.UseWolverine(opts =>
         {
@@ -133,7 +137,7 @@ public static class WebApplicationBuilderExtensions
         app.UseAuthentication();
         app.UseAuthorization();
         app.UseSerilogRequestLogging();
-        app.MapDefaultEndpoints();
+        app.MapHealthChecks("/health");
         app.MapControllers(); 
 
 
