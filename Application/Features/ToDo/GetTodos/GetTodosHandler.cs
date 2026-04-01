@@ -1,8 +1,8 @@
-using CWM.CleanArchitecture.Application.Interfaces;
-using CWM.CleanArchitecture.Domain.Entities;
+using CleanArchitecture.Application.Interfaces;
+using CleanArchitecture.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace CWM.CleanArchitecture.Application.Features.ToDo.GetTodos;
+namespace CleanArchitecture.Application.Features.ToDo.GetTodos;
 
 public class GetTodosHandler(IRepository<TodoItem> _repo)
 {

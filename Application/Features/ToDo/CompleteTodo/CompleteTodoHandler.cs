@@ -1,11 +1,11 @@
-using CWM.CleanArchitecture.Application.Interfaces;
-using CWM.CleanArchitecture.Domain.Entities;
-using CWM.CleanArchitecture.Domain.Events;
+using CleanArchitecture.Application.Interfaces;
+using CleanArchitecture.Domain.Entities;
+using CleanArchitecture.Domain.Events;
 using Microsoft.EntityFrameworkCore;
 using Wolverine;
 using Wolverine.Attributes;
 
-namespace CWM.CleanArchitecture.Application.Features.ToDo.CompleteTodo;
+namespace CleanArchitecture.Application.Features.ToDo.CompleteTodo;
 
 public class CompleteTodoHandler(IRepository<TodoItem> _repo)
 {

@@ -1,10 +1,10 @@
-namespace CWM.CleanArchitecture.Infrastructure;
+namespace CleanArchitecture.Infrastructure;
 
 using System.Text;
-using CWM.CleanArchitecture.Application.Abstractions.Identity;
-using CWM.CleanArchitecture.Domain.Entities;
-using CWM.CleanArchitecture.Infrastructure.Identity;
-using CWM.CleanArchitecture.Infrastructure.Persistence;
+using CleanArchitecture.Application.Abstractions.Identity;
+using CleanArchitecture.Domain.Entities;
+using CleanArchitecture.Infrastructure.Identity;
+using CleanArchitecture.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;

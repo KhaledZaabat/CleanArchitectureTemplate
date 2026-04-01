@@ -1,8 +1,0 @@
-<Solution>
-  <Folder Name="/src/">
-    <Project Path="Api/CWM.CleanArchitecture.Api.csproj" />
-    <Project Path="Application/CWM.CleanArchitecture.Application.csproj" />
-    <Project Path="Domain/CWM.CleanArchitecture.Domain.csproj" />
-    <Project Path="Infrastructure/CWM.CleanArchitecture.Infrastructure.csproj" />
-  </Folder>
-</Solution>

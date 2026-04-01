@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace CWM.CleanArchitecture.Application.Features.ToDo.CreateToDo;
+namespace CleanArchitecture.Application.Features.ToDo.CreateToDo;
 
 public class CreateTodoValidator : AbstractValidator<CreateTodoCommand>
 {

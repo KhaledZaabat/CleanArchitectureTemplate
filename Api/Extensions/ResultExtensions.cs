@@ -1,6 +1,6 @@
-namespace CWM.CleanArchitecture.Api.Extensions;
+namespace CleanArchitecture.Api.Extensions;
 
-using CWM.CleanArchitecture.Domain.Common;
+using CleanArchitecture.Domain.Common;
 
 public static class ResultExtensions
 {

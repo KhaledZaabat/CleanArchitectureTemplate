@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using CWM.CleanArchitecture.Domain.Common;
+using CleanArchitecture.Domain.Common;
 
-namespace CWM.CleanArchitecture.Application.Interfaces;
+namespace CleanArchitecture.Application.Interfaces;
 
 public interface IRepository<T> where T : BaseEntity
 {

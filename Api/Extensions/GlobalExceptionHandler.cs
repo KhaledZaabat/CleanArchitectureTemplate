@@ -1,6 +1,6 @@
-namespace CWM.CleanArchitecture.Api.Extensions;
+namespace CleanArchitecture.Api.Extensions;
 
-using CWM.CleanArchitecture.Application.Exceptions;
+using CleanArchitecture.Application.Exceptions;
 using FluentValidation;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;

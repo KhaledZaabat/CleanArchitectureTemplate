@@ -1,4 +1,4 @@
-namespace CWM.CleanArchitecture.Domain.Common;
+namespace CleanArchitecture.Domain.Common;
 
 public abstract class AuditableEntity : BaseEntity
 {

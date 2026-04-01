@@ -1,4 +1,4 @@
-namespace CWM.CleanArchitecture.Application.Features.ToDo.GetTodos;
+namespace CleanArchitecture.Application.Features.ToDo.GetTodos;
 
 public record TodoDto(
     Guid Id,

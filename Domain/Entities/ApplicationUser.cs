@@ -1,4 +1,4 @@
-namespace CWM.CleanArchitecture.Domain.Entities;
+namespace CleanArchitecture.Domain.Entities;
 
 using Microsoft.AspNetCore.Identity;
 

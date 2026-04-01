@@ -1,4 +1,4 @@
-using CWM.CleanArchitecture.Api.Extensions;
+using CleanArchitecture.Api.Extensions;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()

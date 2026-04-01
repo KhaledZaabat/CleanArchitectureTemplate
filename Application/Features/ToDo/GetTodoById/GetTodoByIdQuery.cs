@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using CWM.CleanArchitecture.Application.Features.ToDo.GetTodos;
-using CWM.CleanArchitecture.Application.Interfaces;
-using CWM.CleanArchitecture.Domain.Entities;
+using CleanArchitecture.Application.Features.ToDo.GetTodos;
+using CleanArchitecture.Application.Interfaces;
+using CleanArchitecture.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace CWM.CleanArchitecture.Application.Features.ToDo.GetTodoById;
+namespace CleanArchitecture.Application.Features.ToDo.GetTodoById;
 
 public record GetTodoByIdQuery(Guid Id);
 

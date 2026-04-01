@@ -1,10 +1,10 @@
 
-using CWM.CleanArchitecture.Application.Interfaces;
-using CWM.CleanArchitecture.Domain.Common;
-using CWM.CleanArchitecture.Infrastructure.Persistence;
+using CleanArchitecture.Application.Interfaces;
+using CleanArchitecture.Domain.Common;
+using CleanArchitecture.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
-namespace CWM.CleanArchitecture.Infrastructure.Implementation;
+namespace CleanArchitecture.Infrastructure.Implementation;
 
 public sealed class Repository<T> : IRepository<T> where T : BaseEntity
 {

@@ -1,4 +1,4 @@
-namespace CWM.CleanArchitecture.Domain.Common;
+namespace CleanArchitecture.Domain.Common;
 
 public sealed class PagedResult<T>(List<T> items, int totalCount, int page, int pageSize)
 {

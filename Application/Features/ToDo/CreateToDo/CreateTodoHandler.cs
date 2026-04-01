@@ -1,10 +1,10 @@
-using CWM.CleanArchitecture.Application.Interfaces;
-using CWM.CleanArchitecture.Domain.Entities;
-using CWM.CleanArchitecture.Domain.Events;
+using CleanArchitecture.Application.Interfaces;
+using CleanArchitecture.Domain.Entities;
+using CleanArchitecture.Domain.Events;
 using Wolverine;
 using Wolverine.Attributes;
 
-namespace CWM.CleanArchitecture.Application.Features.ToDo.CreateToDo;
+namespace CleanArchitecture.Application.Features.ToDo.CreateToDo;
 
 public class CreateTodoHandler(IRepository<TodoItem> _repo)
 {

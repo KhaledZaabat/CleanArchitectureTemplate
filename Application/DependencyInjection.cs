@@ -1,4 +1,4 @@
-namespace CWM.CleanArchitecture.Application;
+namespace CleanArchitecture.Application;
 
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;

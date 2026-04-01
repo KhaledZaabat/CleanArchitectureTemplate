@@ -1,6 +1,6 @@
-namespace CWM.CleanArchitecture.Application.Abstractions.Identity;
+namespace CleanArchitecture.Application.Abstractions.Identity;
 
-using CWM.CleanArchitecture.Domain.Entities;
+using CleanArchitecture.Domain.Entities;
 
 public interface ITokenService
 {

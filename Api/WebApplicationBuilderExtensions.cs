@@ -1,8 +1,8 @@
-using CWM.CleanArchitecture.Application;
-using CWM.CleanArchitecture.Application.Interfaces;
-using CWM.CleanArchitecture.Infrastructure;
-using CWM.CleanArchitecture.Infrastructure.Implementation;
-using CWM.CleanArchitecture.Infrastructure.Persistence;
+using CleanArchitecture.Application;
+using CleanArchitecture.Application.Interfaces;
+using CleanArchitecture.Infrastructure;
+using CleanArchitecture.Infrastructure.Implementation;
+using CleanArchitecture.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using Serilog;
@@ -12,7 +12,7 @@ using Wolverine.FluentValidation;
 using Wolverine.FluentValidation.Internals;
 using Wolverine.SqlServer;
 
-namespace CWM.CleanArchitecture.Api.Extensions;
+namespace CleanArchitecture.Api.Extensions;
 
 public static class WebApplicationBuilderExtensions
 {

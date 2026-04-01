@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv:*)",
+      "Bash(find .:*)",
+      "Bash(ls:*)",
+      "Bash(grep -h \"PackageReference\" */*.csproj)",
+      "Bash(git add:*)"
+    ]
+  }
+}

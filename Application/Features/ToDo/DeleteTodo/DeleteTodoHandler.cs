@@ -1,9 +1,9 @@
-using CWM.CleanArchitecture.Application.Interfaces;
-using CWM.CleanArchitecture.Domain.Entities;
+using CleanArchitecture.Application.Interfaces;
+using CleanArchitecture.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Wolverine.Attributes;
 
-namespace CWM.CleanArchitecture.Application.Features.ToDo.DeleteTodo;
+namespace CleanArchitecture.Application.Features.ToDo.DeleteTodo;
 
 public class DeleteTodoHandler(IRepository<TodoItem> _repo)
 {

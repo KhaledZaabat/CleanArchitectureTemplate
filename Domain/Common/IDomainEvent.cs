@@ -1,3 +1,3 @@
-namespace CWM.CleanArchitecture.Domain.Common;
+namespace CleanArchitecture.Domain.Common;
 
 public interface IDomainEvent { }

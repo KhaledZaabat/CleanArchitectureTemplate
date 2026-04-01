@@ -1,13 +1,12 @@
-namespace CWM.CleanArchitecture.Infrastructure.Persistence;
+namespace CleanArchitecture.Infrastructure.Persistence;
 
-using CWM.CleanArchitecture.Domain.Common;
-using CWM.CleanArchitecture.Domain.Entities;
+using CleanArchitecture.Domain.Common;
+using CleanArchitecture.Domain.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 public sealed class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbContext<ApplicationUser>(options)
 {
-    public DbSet<TodoItem> Todos => Set<TodoItem>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
